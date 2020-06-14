@@ -1,0 +1,18 @@
+G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,5.1.5+dfsg1-2build2*
+G04 #@! TF.CreationDate,2020-06-11T03:48:28+09:00*
+G04 #@! TF.ProjectId,amatelus73,616d6174-656c-4757-9337-332e6b696361,rev?*
+G04 #@! TF.SameCoordinates,Original*
+G04 #@! TF.FileFunction,Paste,Top*
+G04 #@! TF.FilePolarity,Positive*
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 5.1.5+dfsg1-2build2) date 2020-06-11 03:48:28*
+%MOMM*%
+%LPD*%
+G04 APERTURE LIST*
+%ADD10R,2.200000X4.000000*%
+G04 APERTURE END LIST*
+D10*
+X354516500Y-72009000D03*
+X366716500Y-72009000D03*
+M02*
