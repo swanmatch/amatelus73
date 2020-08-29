@@ -1,5 +1,10 @@
 # Amatelus73ビルドガイド
 
+## 概要
+
+m.teiさんの[セミエルゴレイアウト](https://github.com/mtei/SemiErgo_Layout)を参考に作成したシンメトリカルスタッガードキーボード。  
+RGBMATRIXに標準対応しているのも特徴。
+
 
 ### 材料リスト
 
@@ -80,7 +85,7 @@ LEDをはんだ付けします。
 ### ProMicro
 
 ここだけは間違えるとリカバリが面倒なので、**細心の注意**をして作業にあたってください  
-コンスルーを使う場合はHelixなどのビルドガイドを参考にしてください。  
+コンスルーを使う場合は[Helixのビルドガイド](https://github.com/MakotoKurauchi/helix/blob/master/Doc/buildguide_jp.md#pro-micro)などを参考にしてください。  
 また、ProMicroはあらかじめいわゆる「モゲ対策」をしておくといいです。
 
 
@@ -93,8 +98,15 @@ LEDをはんだ付けします。
 
 ![](images/readme/process03.jpg)
 
-この段階で一度後述のファームウェアの書き込みをして導通テストしておくといいです。  
-問題なければ全LEDが点灯するはずです。
+この段階で一度後述のLEDテスト用のファームウェアの書き込みをして導通テストしておくといいです。  
+問題なければ全LEDが点灯するはずです。  
+(RGB_MATRIXはキー押下に応じてLEDが光るモードがデフォルトになっているようなのでLED_testで確認するのが吉です。)
+
+```sh
+git clone https://github.com/swanmatch/qmk_firmware.git --recursive
+cd qmk_firmware
+make amatelus73:led_test:avrdude
+```
 
 
 ### OLED(オプション)
@@ -108,6 +120,9 @@ OLEDにピンをはんだ付けし、基板側にソケットをはんだ付け�
 PCB裏側から丸スペーサーをネジ止めして、
 表側に保護プレートを挟み込む形でPCネジで止めます。
 
+### スタビライザ
+
+スタビライザを組み立てて、回路基板にはめ込みます。  
 
 ### スイッチ
 
@@ -129,10 +144,21 @@ PCB裏側から丸スペーサーをネジ止めして、
 QMKの環境構築についてはお使いのOSによって異なりなりますので、
 公式ドキュメントを読んでください。
 ```sh
+# LEDテストの書き込みを実施した場合は↓は不要
 git clone https://github.com/swanmatch/qmk_firmware.git --recursive
 cd qmk_firmware
 make amatelus73:default:avrdude
 ```
+
+### キーキャップ
+
+キーキャップの取り付けは下記を推奨しています。  
+図はm.teiさんに作成いただきました。
+
+Special Thanks!!
+
+![完成図](images/readme/keycap.jpg)
+
 
 ## 完成図
 
